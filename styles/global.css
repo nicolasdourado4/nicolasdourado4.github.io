@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-primary: #467ab7;
+
+    --white-primary: #fff; /*texto*/
+    --white-secondary: #F8F8F8; /*footer e ícones brancos*/
+
+    --black-primary: #2b2a29;
+
+    --yellow-primary: #FCEF71;
+
+    --font-family-button-a: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    --font-family-titles: "Sofia Sans Condensed", Arial, Helvetica, sans-serif;
+    --font-family-body: "Montserrat", Arial, Helvetica, sans-serif;
+
+    --header-bg-height: 180px;
+    --nav-bg-height: 80px;
+}
+
+
+a {
+    font-family: var(--font-family-button-a), sans-serif;
+    color: var(--white-primary);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-titles);
+    font-weight: 1000;
+    color: var(--black-primary);
+}
+
+p, ul, ol, dl, dt, dd {
+    font-family: var(--font-family-body);
+    color: var(--black-primary);
+    font-size: 1rem;
+}
+
+.footer {
+    color: var(--white-primary);
+    font-family: var(--font-family-body);
+}
+
+
+.button {
+    background-color: var(--black-primary);
+
+    color: var(--white-primary);
+    font-family: var(--font-family-button-a), sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.button-mobile {
+    padding: 8px;
+    font-size: 0.5rem;
+}
+
+
+.button-form {
+    padding: 14px 16px 16px;
+}
+
+.button-form-mobile {
+    padding: 9px 10px 8px;
+}
+
+
+.hover:hover {
+    color: var(--yellow-primary);
+}
+
+.nav-hover:hover {
+    background-color: #353432;
+}
+
+
+/*ANIMATIONS*/
+
