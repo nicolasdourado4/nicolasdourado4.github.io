@@ -71,7 +71,38 @@ header {
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
 }
 
+.slider-wrapper {
+    position: relative;
+}
 
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 2.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav-play {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 2.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav-btn {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 70%;
+    transition: opacity ease 250ms;
+}
 
 
 /*FOOTER*/
