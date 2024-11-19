@@ -178,7 +178,7 @@ nav {
     bottom: 2.25rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 0;
 }
 
 .slider-nav-play {
@@ -315,6 +315,7 @@ nav {
 .news-content h1 {
     font-size: 3rem;
     margin-bottom: 16px;
+
 }
 
 .news-content button {
@@ -330,10 +331,36 @@ nav {
 
 
 
+/*SOCIAL SECTION*/
 
+.social-section {
+    width: 100%;
+    height: 100px;
+    background-color: var(--yellow-primary);
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+}
 
+.social-text {
+    text-align: center;
+}
 
+.social-text h1 {
+    font-size: 2rem;
+}
+
+.social-images {
+    display: flex;
+    gap: 16px;
+}
+
+.social-images a:hover {
+    opacity: 0.9;
+}
 
 /*FOOTER*/
 
