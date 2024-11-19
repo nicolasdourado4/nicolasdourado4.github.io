@@ -228,9 +228,17 @@ nav {
 
 /*NEWSLETTER*/
 .newsletter {
-    background-color: #F8F8F8;
+    background-color: var(--white-secondary);
     height: 304px;
 
+
+}
+
+.newsletter-content {
+    background-color: var(--white-primary);
+
+
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +288,50 @@ nav {
 
     height: 50px;
 }
+
+
+/*NEWS SECTION*/
+
+.news {
+    position: relative;
+
+    height: 432px;
+    width: 100%;
+
+    background-color: var(--blue-primary);
+}
+
+.news-content {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+
+    background-color: var(--white-primary);
+}
+
+.news-content h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.news-content button {
+    margin-top: 16px;
+    padding-inline: 32px;
+}
+
+.news-image {
+    display: block;
+    max-height: 100%;
+}
+
+
+
+
+
+
 
 
 

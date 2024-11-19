@@ -59,6 +59,8 @@ p, ul, ol, dl, dt, dd {
     padding: 16px 16px;
     text-align: center;
     cursor: pointer;
+    border: none;
+
 }
 
 .button-mobile {
@@ -88,6 +90,7 @@ p, ul, ol, dl, dt, dd {
     max-width: 1600px;
     margin: auto;
 }
+
 
 
 /*ANIMATIONS*/
