@@ -1,3 +1,7 @@
+body {
+    background-color: var(--white-secondary);
+}
+
 
 header {
     position: fixed;
@@ -32,7 +36,7 @@ header {
     justify-content: space-between;
     text-align: center;
 
-    padding: 20px 172px;
+    padding: 18px 172px;
 }
 
 .nav-logo {
@@ -54,7 +58,9 @@ nav {
     font-size: 1.5rem;
     letter-spacing: 2px;
     margin-right: 100px;
-    padding: 28px 15px 26px; /*borda*/
+    padding: 24px 15px 24px; /*borda*/
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /*DROPDOWN MENU*/
@@ -149,7 +155,6 @@ nav {
     scroll-snap-type: x mandatory;
 
     height: 97vh;
-
 }
 
 .slider img {
@@ -162,6 +167,7 @@ nav {
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
 
     animation: slide-animation 8s infinite;
+
 }
 
 
@@ -194,6 +200,7 @@ nav {
     transition: opacity ease 250ms;
 }
 
+
 @keyframes slide-animation {
     0%{
         transform: translateX(0);
@@ -217,6 +224,63 @@ nav {
         transform: translateX(0);
     }
 }
+
+
+/*NEWSLETTER*/
+.newsletter {
+    background-color: #F8F8F8;
+    height: 304px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h1 {
+    font-size: 2rem;
+    margin: 56px 0px 10px;
+}
+
+.newsletter form {
+    margin: 28px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-input {
+    height: 50px;
+    width: 432px;
+
+    border: none;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(43, 42, 41, 0.2);
+
+}
+
+.newsletter-input::placeholder {
+    color: var(--black-primary);
+    font-family: var(--font-family-body);
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.newsletter-input[type="email"] {
+    color: var(--black-primary);
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    padding-left: 16px;
+
+}
+
+.newsletter-button {
+    background-color: var(--black-primary);
+    border: none;
+    color: var(--white-primary);
+
+    height: 50px;
+}
+
 
 
 /*FOOTER*/

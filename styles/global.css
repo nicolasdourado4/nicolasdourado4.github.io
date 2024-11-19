@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-titles);
     font-weight: 1000;
     color: var(--black-primary);
+    text-transform: uppercase;
 }
 
 p, ul, ol, dl, dt, dd {
@@ -55,8 +56,9 @@ p, ul, ol, dl, dt, dd {
     font-size: 1rem;
     letter-spacing: 2px;
 
-    padding: 16px 32px;
+    padding: 16px 16px;
     text-align: center;
+    cursor: pointer;
 }
 
 .button-mobile {
@@ -80,6 +82,11 @@ p, ul, ol, dl, dt, dd {
 
 .nav-hover:hover {
     background-color: #353432;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
 }
 
 
