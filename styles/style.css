@@ -1,5 +1,7 @@
+
 header {
     position: fixed;
+    z-index: 1;
     width: 100%;
     top: 0;
 }
@@ -30,7 +32,7 @@ header {
     justify-content: space-between;
     text-align: center;
 
-    padding: 20px;
+    padding: 20px 172px;
 }
 
 .nav-logo {
@@ -42,19 +44,19 @@ header {
 }
 
 .nav-links a {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
-    margin-right: 50px;
-    padding: 28px 15px 24px; /*borda*/
-
+    margin-right: 100px;
+    padding: 28px 15px 22px; /*borda*/
 }
 
 
 /*CAROUSEL SLIDESHOW*/
 
 .slideshow {
+    position: relative;
     margin-top: 180px;
-
+    z-index: 0;
 }
 
 .slider {
@@ -65,6 +67,7 @@ header {
 }
 
 .slider img {
+
     width: 100%;
 
     flex: 1 0 100%;
