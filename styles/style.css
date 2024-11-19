@@ -134,9 +134,12 @@ nav {
 /*CAROUSEL SLIDESHOW*/
 
 .slideshow {
-    position: relative;
-    margin-top: 180px;
     z-index: 0;
+    height: 97vh;
+}
+
+.slider-wrapper {
+    position: relative;
 }
 
 .slider {
@@ -144,19 +147,21 @@ nav {
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+
+    height: 97vh;
+
 }
 
 .slider img {
-
     width: 100%;
+    margin-top: 180px; /*header height*/
+    object-fit: cover;
+
 
     flex: 1 0 100%;
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
 }
 
-.slider-wrapper {
-    position: relative;
-}
 
 .slider-nav {
     display: flex;
