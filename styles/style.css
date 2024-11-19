@@ -342,7 +342,8 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 56px;
+    gap: 70px;
+    position: relative;
 }
 
 .social-text {
@@ -355,12 +356,30 @@ nav {
 
 .social-images {
     display: flex;
-    gap: 16px;
+    gap: 28px;
 }
 
 .social-images a:hover {
     opacity: 0.9;
 }
+
+
+.social-shape {
+    width: 46%;
+    /*height: 40px;*/
+    /*background-color: var(--black-primary);*/
+    position: absolute;
+    margin-bottom: 134px;
+    right: 0;
+
+    border-bottom: 36px solid var(--yellow-primary);
+    border-left: 36px solid transparent;
+}
+
+
+
+
+
 
 /*FOOTER*/
 
