@@ -228,14 +228,14 @@ nav {
 
 /*NEWSLETTER*/
 .newsletter {
-    background-color: var(--white-secondary);
+    background-color: #F1f1f1;
     height: 304px;
 
 
 }
 
 .newsletter-content {
-    background-color: var(--white-primary);
+    background-color: var(--white-secondary);
 
 
     height: 100%;
@@ -309,7 +309,7 @@ nav {
     align-items: center;
     gap: 32px;
 
-    background-color: var(--white-primary);
+    background-color: var(--white-secondary);
 }
 
 .news-content h1 {
