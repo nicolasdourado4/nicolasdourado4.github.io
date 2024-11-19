@@ -144,7 +144,7 @@ nav {
 
 .slider {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden; /*hide scrollbar*/
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 
@@ -160,6 +160,8 @@ nav {
 
     flex: 1 0 100%;
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
+
+    animation: slide-animation 8s infinite;
 }
 
 
@@ -192,6 +194,29 @@ nav {
     transition: opacity ease 250ms;
 }
 
+@keyframes slide-animation {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    95% {
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 
 
 /*FOOTER*/
