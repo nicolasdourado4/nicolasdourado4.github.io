@@ -141,7 +141,6 @@ nav {
 
 .slideshow {
     z-index: 0;
-    height: 97vh;
 }
 
 .slider-wrapper {
@@ -154,7 +153,7 @@ nav {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 
-    height: 97vh;
+    height: 85vh;
 }
 
 .slider img {
@@ -303,12 +302,12 @@ nav {
 
 .news-content {
     height: 100%;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 32px;
-
     background-color: var(--white-secondary);
 }
 
@@ -323,11 +322,23 @@ nav {
     padding-inline: 32px;
 }
 
-.news-image {
-    display: block;
+.news-image-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 48%;
     max-height: 100%;
 }
 
+.news-image {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.news-image:hover {
+    transform: scale(1.05);
+}
 
 
 
@@ -443,7 +454,6 @@ nav {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s ease-in-out;
-
 }
 
 .card-image {
