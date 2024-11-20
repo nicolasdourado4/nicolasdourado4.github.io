@@ -435,6 +435,7 @@ nav {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
+    cursor: pointer;
 
 }
 
@@ -537,6 +538,10 @@ nav {
     gap: 242px;
 }
 
+.second-news-info {
+    z-index: 1;
+}
+
 .second-news-content img {
     mask-image: linear-gradient(to left, rgba(0,0,0,0) 12%,rgba(0,0,0,1) 70%);;
 
@@ -623,6 +628,10 @@ footer {
     font-family: var(--font-family-body);
     font-weight: 800;
     color: var(--white-primary);
+}
+
+.footer-links a:hover {
+    color: var(--yellow-primary);
 }
 
 .footer-container hr {
