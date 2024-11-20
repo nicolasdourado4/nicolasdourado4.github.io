@@ -713,6 +713,10 @@ nav {
     .card-title {
         font-size: 1.2rem;
     }
+
+    .card-description {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -837,6 +841,20 @@ nav {
     }
 }
 
+@media (max-width: 530px) {
+    .second-news-info h1 {
+        font-size: 1rem;
+    }
+
+    .second-news-info p {
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+    }
+
+    .second-news-info button {
+    }
+}
+
 
 /*TRAPEZIO FOOTER*/
 
@@ -874,6 +892,16 @@ nav {
 }
 
 
+@media (max-width: 530px) {
+    .top-footer-images {
+        margin-right: 24px;
+        gap: 16px;
+    }
+    .top-footer-images img {
+        width: 24px;
+    }
+}
+
 /*FOOTER*/
 
 
@@ -881,7 +909,6 @@ footer {
     background-color: var(--black-primary);
     width: 100%;
     height: 130px;
-
 }
 
 .footer-container {
@@ -943,6 +970,36 @@ footer {
 
     .footer-container hr {
         max-width: 32%;
+    }
+}
+
+@media (max-width: 530px) {
+    footer {
+        height: 92px;
+    }
+
+    .footer-links {
+        max-width: 36%;
+        gap: 8px;
+    }
+
+    .footer-links a {
+        font-size: 0.55rem;
+        font-weight: 600;
+    }
+
+    .footer-container hr {
+        max-width: 42%;
+    }
+
+    .footer-container p {
+        font-size: 0.4rem;
+        margin-top: 12px;
+        margin-bottom: 0px;
+    }
+
+    .footer-container span {
+        font-size: 0.4rem;
     }
 }
 
