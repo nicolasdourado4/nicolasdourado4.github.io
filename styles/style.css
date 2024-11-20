@@ -538,9 +538,7 @@ nav {
     gap: 242px;
 }
 
-.second-news-info {
-    z-index: 1;
-}
+
 
 .second-news-content img {
     mask-image: linear-gradient(to left, rgba(0,0,0,0) 12%,rgba(0,0,0,1) 70%);;
@@ -549,6 +547,8 @@ nav {
 
 .second-news-info {
     width: 100%;
+    z-index: 1;
+
 }
 
 
@@ -561,6 +561,7 @@ nav {
 .second-news-content p {
     color: var(--white-primary);
     margin-right: 72px;
+    line-height: 1.5rem;
 }
 
 .second-news-content button {
@@ -596,7 +597,10 @@ nav {
 .top-footer-images img {
     height: 45px;
     width: 45px;
+
+    filter: invert(100%) sepia(0%) saturate(7424%) hue-rotate(51deg) brightness(115%) contrast(93%);
 }
+
 
 
 /*FOOTER*/
