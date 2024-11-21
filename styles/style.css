@@ -27,8 +27,12 @@ header {
 
     margin-top: 80px;
     z-index: 2;
+    animation: scroll 2ms ease-in-out;
+    animation-timeline: scroll();
 
 }
+
+
 
 .nav-content {
     display: flex;
@@ -37,7 +41,67 @@ header {
     text-align: center;
 
     padding: 18px 172px;
+
 }
+
+@keyframes scroll {
+    0% {
+        margin-top: 80px;
+    }
+    20% {
+        margin-top: 90px;
+    }
+    30% {
+        margin-top: 110px;
+    }
+    100% {
+        margin-top: 110px;
+    }
+
+}
+
+.nav-links {
+    animation: scroll-links 2ms ease-in-out;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-links {
+    0% {
+        margin-top: 0px;
+    }
+    20% {
+        margin-top: 15px;
+    }
+    30% {
+        margin-top: 30px;
+    }
+    100% {
+        margin-top: 30px;
+    }
+}
+
+.nav-logo-container {
+    animation: scroll-logo 2ms ease-in-out;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-logo {
+    0% {
+        margin-top: 0px;
+    }
+    20% {
+        margin-top: 15px;
+    }
+    30% {
+        margin-top: 30px;
+    }
+    100% {
+        margin-top: 30px;
+    }
+
+}
+
+
 
 .nav-logo-container {
     z-index: 3;
@@ -317,68 +381,6 @@ nav {
 }
 
 
-
-
-
-/*.nav-menu {*/
-/*    display: none;*/
-/*}*/
-
-/*.nav-menu-close {*/
-/*    display: flex;*/
-/*    justify-content: end;*/
-/*    padding: 8px 24px;*/
-/*}*/
-
-/*.nav-menu-close-img {*/
-/*    height: 60px;*/
-/*    width: 60px;*/
-
-/*}*/
-
-/*@media (max-width: 530px) {*/
-/*    .nav-menu {*/
-/*      display: flex;*/
-/*    }*/
-
-/*    .nav-content {*/
-/*        display: flex;*/
-/*        align-items: start;*/
-/*    }*/
-
-/*    nav {*/
-/*        position: absolute;*/
-/*        z-index: 10;*/
-/*        right: 0;*/
-/*        background-color: var(--black-primary);*/
-/*        height: 100vh;*/
-/*        width: 54vw;*/
-/*        margin-top: -18px;*/
-/*        margin-right: 62px;*/
-/*    }*/
-
-/*    .nav-links {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        gap: 16px;*/
-
-/*        justify-content: center;*/
-/*        align-items: center;*/
-
-/*        background-color: rgba(75, 76, 80, 0.1);*/
-/*        padding: 16px 0px;*/
-/*    }*/
-
-/*    .nav-links a {*/
-/*        font-size: 1.4rem;*/
-/*        width: 100%;*/
-/*        padding: 16px;*/
-/*        !*border-bottom: 1px solid white;*!*/
-/*    }*/
-
-
-
-/*}*/
 
 
 /*CAROUSEL SLIDESHOW*/
