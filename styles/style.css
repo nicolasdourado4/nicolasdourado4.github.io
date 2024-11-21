@@ -451,6 +451,15 @@ nav {
     .slider {
         height: 56vh;
     }
+
+    .slider-info h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .slider-info p {
+        font-size: 0.6rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -463,12 +472,35 @@ nav {
     .slider {
         height: 60vh;
     }
+
+    .slider-info h1 {
+        font-size: 2rem;
+    }
+
+    .slider-info p {
+        font-size: 0.4rem;
+        letter-spacing: 2.3px;
+    }
 }
 
 @media (max-width: 530px) {
     .slider {
         width: 115vw;
         height: 52vh;
+    }
+
+    .slider-info {
+        padding: 18px 24px;
+    }
+
+    .slider-info h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .slider-info p {
+        font-size: 0.24rem;
+        letter-spacing: 1.2px;
     }
 }
 
@@ -477,6 +509,16 @@ nav {
         height: 66vh;
         width: 118vw;
         margin-top: 10px;
+    }
+
+    .slider-info h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .slider-info p {
+        font-size: 0.4rem;
+        letter-spacing: 0px;
     }
 }
 
