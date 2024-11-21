@@ -333,13 +333,13 @@ nav {
 
     height: 85vh;
 
+
 }
 
 .slider img {
     width: 100%;
     margin-top: 180px; /*header height*/
     object-fit: cover;
-
 
     flex: 1 0 100%;
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
@@ -350,10 +350,12 @@ nav {
 
 .slider-bg {
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0.9) 70%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 70%,rgba(0,0,0,0.5) 99%);
+    box-shadow: inset 0 -40px 120px rgba(0, 0, 0, 0.85);
     width: 100%;
     height: 100%;
     bottom: 0;
+
 }
 
 .slider-info {
