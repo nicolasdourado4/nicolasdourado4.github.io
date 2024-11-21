@@ -10,9 +10,34 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="container">
+    <header class="">
         <div class="header-background">
-            <div class="nav-background"></div>
+            <div class="nav-background">
+            </div>
+<!--            MENU HAMBURGUER-->
+
+                <ul class="menu-nav">
+                    <input type="checkbox" id="check">
+                    <span class="menu">
+                        <label for="check" class="close-menu"><img src="images/icon-closeBurgerMenu.svg" alt=""></label>
+                        <div class="menu-links">
+                            <li><a href="#">SERVIÇOS</a></li>
+                            <hr>
+                            <li><a href="#">VISITAS</a></li>
+                            <hr>
+                            <li><a href="#">SOBRE</a></li>
+                            <hr>
+                            <li><a href="#">CONTATO</a></li>
+                            <hr>
+                            <li><a href="#">ENDEREÇO</a></li>
+                            <hr>
+                        </div>
+                    </span>
+                    <label for="check" class="open-menu"><img src="images/icon-openBurgerMenu.svg" alt=""></label>
+                </ul>
+
+
+<!--            FIM MENU HAMBURGUER-->
 
             <div class="nav-content">
                 <div class="nav-logo-container">
@@ -21,8 +46,8 @@
 
                 <nav>
                     <div class="nav-links">
-                        <div class="nav-link hover nav-hover dropdown" href="">
-                            <a class="hover dropdown-button" href="">SERVIÇOS</a>
+                        <div class="hover nav-hover dropdown">
+                            <a class="nav-link hover dropdown-button" href="#">SERVIÇOS</a>
                             <div class="dropdown-content">
                                 <a class="hover nav-hover" href="">REFÚGIOS</a>
                                 <a class="hover nav-hover" href="">SEGURO DE VIDA</a>
@@ -30,11 +55,14 @@
                                 <a class="hover nav-hover" href="">ENERGIA</a>
                             </div>
                         </div>
-                        <a class="nav-link hover nav-hover" href="">VISITAS</a>
-                        <a class="nav-link hover nav-hover" href="">SOBRE</a>
-                        <a class="nav-link hover nav-hover" href="">CONTATO</a>
-                        <a class="nav-link hover nav-hover" href="">ENDEREÇO</a>
+                        <a class="nav-link hover nav-hover" href="#">VISITAS</a>
+                        <a class="nav-link hover nav-hover" href="#">SOBRE</a>
+                        <a class="nav-link hover nav-hover" href="#">CONTATO</a>
+                        <a class="nav-link hover nav-hover" href="#">ENDEREÇO</a>
                     </div>
+<!--                    <div class="nav-menu">-->
+<!--                        <img class="nav-menu-button" src="images/icon-openBurgerMenu.svg" alt="">-->
+<!--                    </div>-->
 
                 </nav>
             </div>
@@ -43,12 +71,20 @@
     </header>
 
 
+
+
     <section class="slideshow">
         <div class="slider-wrapper">
             <div class="slider">
                 <img id="slide-1" src="images/slide-1.png" alt="">
                 <img id="slide-2" src="images/slide-2.png" alt="">
                 <img id="slide-3" src="images/slide-3.png" alt="">
+            </div>
+            <div class="slider-bg">
+            </div>
+            <div class="slider-info">
+                <h1>VAULT-TEC</h1>
+                <p>Tecnologia do Futuro no seu presente!</p>
             </div>
             <div class="slider-nav">
                 <div class="slider-nav-play">
