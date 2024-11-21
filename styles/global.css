@@ -91,9 +91,27 @@ p, ul, ol, dl, dt, dd {
 
 .container {
     max-width: 1600px;
-    margin: auto;
+    margin: 0 auto;
 }
 
+@media (max-width: 530px) {
+    .container {
+        max-width: 530px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    body {
+        margin-right: -62px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    body {
+        margin-right: -68px;
+    }
+}
 
 
 /*ANIMATIONS*/
