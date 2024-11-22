@@ -586,13 +586,19 @@ nav {
     .slider-info p {
         font-size: 0.6rem;
     }
+
+    .nav-link {
+        padding-block: 28px;
+
+    }
+
 }
 
 @media (max-width: 900px) {
     .nav-link {
-        margin-right: 5px;
+        margin-right: 0px;
         font-size: 1rem;
-        padding: 5px;
+        padding-block: 30px;
     }
 
     .slider {
