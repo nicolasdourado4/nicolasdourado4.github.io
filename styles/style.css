@@ -243,7 +243,7 @@ nav {
         justify-content: center;
         width: 60%;
         height: 100%;
-        background-color: var(--black-primary);
+        background-color: #242422;
         gap: 16px;
 
         position: fixed;
@@ -262,7 +262,8 @@ nav {
         position: absolute;
         top: 100px;
 
-        background-color: rgba(50, 49, 48, 0.85);
+        /*background-color: rgba(50, 49, 48, 0.85);*/
+        background-color: var(--black-primary);
         padding: 0px 84px;
         padding-bottom: 0px;
     }
@@ -331,6 +332,7 @@ nav {
 
     }
 
+
 }
 
 @media (max-width: 530px) {
@@ -369,44 +371,64 @@ nav {
 }
 
 /*HAMBURGUER MENU DROPDOWN*/
-.menu-dropdown-content {
+
+.open-menu:checked ~ .menu-dropdown-links {
+    display: flex;
+    perspective: 1000px;
+}
+
+.menu-dropdown-links {
     display: none;
     flex-direction: column;
+    align-items: center;
 
-    position: absolute;
+    padding: 0px;
+    padding-inline: 0px;
+    margin: 0px -85px;
+    background-color: #242422;
+}
 
-    left: -40px;
-    right: -40px;
-    margin-top: 8px;
+.menu-dropdown-links li {
+    padding: 0px 0px;
+    margin: 0px;
+}
+
+.menu-dropdown-links li a {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 16px;
+    margin: 0px;
 }
 
 .open-dropdown {
     display: block;
 }
 
-
-#check-menu-dropdown {
+#open-dropdown {
     position: absolute;
     opacity: 0;
     height: 40px;
     width: 100%;
     top: 30px;
+    right: 30px;
 }
 
-#check-menu-dropdown:checked + .menu-dropdown-content {
+#open-dropdown:checked ~ .menu-dropdown-links{
     display: flex;
 }
 
+/*HAMBURGUER MENU DROPDOWN ANIMATION*/
 
-.menu-dropdown-content a {
-    background-color: var(--black-primary);
-    padding: 12px 0px;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+.open-menu:checked ~ .menu-dropdown-links {
+    perspective: 1000px;
+    transform-origin: top center;
+    opacity: 0;
 }
 
-.menu-dropdown-button:hover + .menu-dropdown-content {
-    display: flex;
+.menu-dropdown-links li {
+    animation: dropdown-animation 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+
 }
 
 
