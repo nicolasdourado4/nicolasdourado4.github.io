@@ -437,7 +437,7 @@ nav {
     scroll-snap-align: start; /*faz imagem sempre parar no começo (nao fica na metade)*/
 
     animation: slide-animation 8s infinite;
-
+    scroll-margin-top: 190px;
 }
 
 .slider-bg {
@@ -483,14 +483,24 @@ nav {
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 0;
+    z-index: 1;
+}
+
+#check-slider-nav {
+    position: absolute;
+    z-index: 2;
+    bottom: 12px;
+    right: 47%;
+    width: 100px;
+    height: 30px;
+    opacity: 0;
 }
 
 .slider-nav-play {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 2.25rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -507,6 +517,15 @@ nav {
 
 .animation-btn {
     opacity: 0.7;
+}
+
+
+#check-slider-nav:checked ~ .slider img{
+    animation: none;
+}
+
+#check-slider-nav:checked {
+    bottom: 36px;
 }
 
 
