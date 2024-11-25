@@ -227,6 +227,18 @@ nav {
         display: none;
     }
 
+    .nav-content {
+        margin: 20px;
+    }
+
+    .header-background {
+        height: 220px;
+    }
+
+    .nav-background {
+        height: 100px;
+    }
+
     .menu-nav {
         display: flex;
         flex-direction: column;
@@ -234,7 +246,6 @@ nav {
         justify-content: center;
         position: relative;
     }
-
 
     .menu {
         display: flex;
@@ -304,7 +315,7 @@ nav {
     }
 
     .open-menu {
-        right: 12px;
+        right: 28px;
         top: 90px;
         z-index: 2;
     }
@@ -343,17 +354,55 @@ nav {
 
     @keyframes scroll-menu {
         0% {
-            margin-top: 0px;
+            margin-top: 10px;
         }
         20% {
-            margin-top: 10px;
+            margin-top: 20px;
+        }
+        30% {
+            margin-top: 50px;
+        }
+        100% {
+            margin-top: 50px;
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            margin-top: 80px;
+        }
+        20% {
+            margin-top: 90px;
+        }
+        30% {
+            margin-top: 120px;
+        }
+        100% {
+            margin-top: 120px;
+        }
+
+    }
+
+    @keyframes scroll-logo {
+        0% {
+            margin-top: 0px;
+            transform: scale(1.2);
+        }
+        20% {
+            margin-top: 15px;
+            transform: scale(1.1);
+
         }
         30% {
             margin-top: 30px;
+            transform: scale(1);
         }
         100% {
             margin-top: 30px;
+            transform: scale(1);
+
         }
+
     }
 
 }
@@ -367,6 +416,8 @@ nav {
     .menu-links li a {
         font-size: 1.2rem;
     }
+
+
 
 
 }
