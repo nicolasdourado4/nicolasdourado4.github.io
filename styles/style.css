@@ -1683,3 +1683,140 @@ footer {
     }
 
 }
+
+
+
+.modal {
+    position: relative;
+}
+
+
+.modal-bg-img {
+    position: fixed;
+    z-index: 5;
+    background-image: url("/images/Fundo-popup.png");
+    width: 100%;
+    height: 100%;
+}
+
+.modal-bg {
+    position: fixed;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+
+.modal-content {
+    position: fixed;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-popup {
+    background-color: var(--white-secondary);
+    width: 500px;
+    height: 600px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.modal-popup h1 {
+    font-size: 2rem;
+    font-family: var(--font-family-body);
+    font-weight: 900;
+    margin-top: 12px;
+}
+
+.modal-popup p {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.8rem;
+    padding-inline: 44px;
+}
+
+.modal-popup-buttons {
+    display: flex;
+    gap: 64px;
+}
+
+.modal-popup-buttons label {
+    padding: 16px 32px;
+}
+
+#check-modal {
+    display: none;
+}
+
+#check-modal:checked ~ .modal {
+    display: none;
+}
+
+
+@media (max-width: 450px) {
+    .modal-popup {
+        width: 400px;
+        height: 500px;
+        border-radius: 32px;
+        gap: 16px;
+    }
+
+    .modal-popup h1 {
+        font-size: 1.5rem;
+        margin-top: 0px;
+    }
+
+    .modal-popup p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .popup-first-image {
+        width: 100px;
+    }
+
+    .popup-second-image {
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .modal-popup {
+        width: 350px;
+        height: 500px;
+        border-radius: 38px;
+        gap: 10px;
+    }
+
+    .modal-popup p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .popup-first-image {
+        width: 120px;
+    }
+
+    .popup-second-image {
+        width: 200px;
+    }
+
+    .modal-popup-buttons label {
+        padding: 12px 20px;
+        font-size: 0.7rem;
+    }
+
+}
