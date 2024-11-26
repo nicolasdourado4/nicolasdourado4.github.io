@@ -654,14 +654,19 @@ nav {
 
 #input-radio-1:checked ~ .slider img {
     transform: translateX(0%);
+    animation: slide-animation-1 800ms ease-in-out;
 }
 
 #input-radio-2:checked ~ .slider img {
     transform: translateX(-100%);
+    animation: slide-animation-2 800ms ease-in-out;
+
 }
 
 #input-radio-3:checked ~ .slider img {
     transform: translateX(-200%);
+    animation: slide-animation-3 800ms ease-in-out;
+
 }
 
 
