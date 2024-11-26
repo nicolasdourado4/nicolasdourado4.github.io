@@ -279,7 +279,6 @@ nav {
         padding-bottom: 0px;
     }
 
-
     .menu-links li a {
         display: inline-block;
         text-decoration: none;
@@ -440,16 +439,23 @@ nav {
     background-color: #242422;
 }
 
-.menu-dropdown-links li {
+.ul-menu-dropdown-links li {
     padding: 0px 0px;
     margin: 0px;
 }
 
-.menu-dropdown-links li a {
-    font-size: 1.5rem;
+.ul-menu-dropdown-links li a {
+    font-size: 1.4rem;
     letter-spacing: 2px;
     padding: 16px;
     margin: 0px;
+}
+
+.ul-menu-dropdown-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 16px;
 }
 
 .open-dropdown {
@@ -469,6 +475,45 @@ nav {
     display: flex;
 }
 
+#open-dropdown:checked ~ .menu-sec-links {
+    animation: dropdown-menu-animation 300ms ease-in-out;
+}
+
+
+@keyframes dropdown-menu-animation {
+    0% {
+        transform: translateY(-275px);
+        margin-bottom: -275px;
+    }
+
+    100% {
+        transform: translateY(0);
+        padding-bottom: 0px;
+    }
+}
+
+
+
+#open-dropdown:not(:checked) ~ .menu-sec-links {
+    animation: dropdown-menu-animation-2 300ms ease-in-out;
+
+}
+
+@keyframes dropdown-menu-animation-2 {
+    0% {
+        transform: translateY(275px);
+        margin-bottom: 275px;
+    }
+
+    100% {
+        transform: translateY(0);
+        padding-bottom: 0px;
+    }
+}
+
+
+
+
 /*HAMBURGUER MENU DROPDOWN ANIMATION*/
 
 .open-menu:checked ~ .menu-dropdown-links {
@@ -478,11 +523,28 @@ nav {
 
 
 }
+
 .menu-dropdown-links {
-    animation: dropdown-animation-menu 300ms ease-in-out;
-    animation-delay: -150ms;
+    animation: dropdown-animation-menu-2 400ms ease-in-out;
 }
 
+@keyframes dropdown-animation-menu-2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown-animation-menu-3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes dropdown-animation-menu {
     from {
