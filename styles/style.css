@@ -317,6 +317,8 @@ nav {
         right: 28px;
         top: 90px;
         z-index: 2;
+        transform: scale(1.1);
+        margin-right: 8px;
     }
 
     .close-menu {
@@ -340,6 +342,10 @@ nav {
         top: 0;
         left: 0;
 
+    }
+
+    .nav-logo-img {
+        margin-left: 10px;
     }
 
 
@@ -416,7 +422,9 @@ nav {
         font-size: 1.2rem;
     }
 
-
+    .open-menu {
+        transform: scale(1.2);
+    }
 
 
 }
