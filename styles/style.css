@@ -1979,7 +1979,6 @@ footer {
     align-items: center;
     padding: 40px 15px;
     animation: modal-popup-animation 0.6s ease-in-out;
-
 }
 
 @keyframes modal-popup-animation  {
@@ -2056,12 +2055,14 @@ footer {
         width: 350px;
         height: 500px;
         border-radius: 38px;
-        gap: 10px;
+        gap: 16px;
     }
 
     .modal-popup p {
-        font-size: 0.9rem;
+        font-size: 1rem;
         line-height: 1.5rem;
+        margin-inline: -10px;
+        margin-bottom: 12px;
     }
 
     .popup-first-image {
@@ -2070,11 +2071,13 @@ footer {
 
     .popup-second-image {
         width: 200px;
+        transform: scale(1.1);
+        margin-bottom: 20px;
     }
 
     .modal-popup-buttons label {
-        padding: 12px 20px;
-        font-size: 0.7rem;
+        padding: 16px 32px;
+        font-size: 0.75rem;
     }
 
 }
