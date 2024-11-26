@@ -108,25 +108,36 @@
     <section class="slideshow">
         <div class="slider-wrapper">
 
-            <input type="checkbox" id="check-slider-nav" autocomplete="off">
+<!--            <input type="checkbox" id="check-slider-nav" autocomplete="off">-->
+
+            <input name="slide-input-radio" type="radio" id="input-radio-1" class="slide-input-radio">
+            <input name="slide-input-radio" type="radio" id="input-radio-2" class="slide-input-radio">
+            <input name="slide-input-radio" type="radio" id="input-radio-3" class="slide-input-radio">
+            <input name="slide-input-radio" type="radio" id="input-check-play" class="slide-check-play">
             <div class="slider">
                 <img id="slide-1" src="images/slide-1.png" alt="">
                 <img id="slide-2" src="images/slide-2.png" alt="">
                 <img id="slide-3" src="images/slide-3.png" alt="">
             </div>
 
-            <label class="slider-nav" for="check-slider-nav">
-                <a class="slider-nav-btn" href="#slide-1"></a>
-                <a class="slider-nav-btn" href="#slide-2"></a>
-                <a class="slider-nav-btn" href="#slide-3"></a>
-            </label>
+            <div class="slider-nav">
+                <label class="slider-nav-btn" for="input-radio-1"></label>
+                <label class="slider-nav-btn" for="input-radio-2"></label>
+                <label class="slider-nav-btn" for="input-radio-3"></label>
+            </div>
+<!--            <label class="slider-nav" for="check-slider-nav">-->
+<!--                <a class="slider-nav-btn" href="#slide-1"></a>-->
+<!--                <a class="slider-nav-btn" href="#slide-2"></a>-->
+<!--                <a class="slider-nav-btn" href="#slide-3"></a>-->
+<!--            </label>-->
 
 
             <div class="slider-nav-play">
-                <a class="animation-btn" href="#slide-1">
+                <label class="animation-btn" for="input-check-play">
                     <img src="images/icon-play.svg" alt="">
-                </a>
+                </label>
             </div>
+
             <div class="slider-bg">
             </div>
             <div class="slider-info">

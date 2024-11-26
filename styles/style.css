@@ -587,7 +587,6 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    cursor: pointer;
 }
 
 #check-slider-nav {
@@ -623,17 +622,75 @@ nav {
 
 .animation-btn {
     opacity: 0.7;
+    cursor: pointer;
+
 }
 
-#check-slider-nav:checked ~ .slider img{
+.slide-check-play {
+    display: none;
+}
+
+#input-check-play:checked ~ .slider img{
+    animation: slide-animation 8s infinite;
+}
+
+
+/*#check-slider-nav:checked ~ .slider img{*/
+/*    animation: none;*/
+/*}*/
+
+/*#check-slider-nav:checked {*/
+/*    bottom: 36px;*/
+/*}*/
+
+.slide-input-radio {
+    display: none;
+}
+
+.slide-input-radio:checked ~ .slider img {
     animation: none;
+    transform: translateX(0);
 }
 
-#check-slider-nav:checked {
-    bottom: 36px;
+#input-radio-1:checked ~ .slider img {
+    transform: translateX(0%);
+}
+
+#input-radio-2:checked ~ .slider img {
+    transform: translateX(-100%);
+}
+
+#input-radio-3:checked ~ .slider img {
+    transform: translateX(-200%);
 }
 
 
+@keyframes slide-animation-1 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-animation-2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-animation-3 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
 
 @media (max-width: 1690px) {
     .nav-content {
