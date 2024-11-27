@@ -1968,7 +1968,7 @@ footer {
 }
 
 .modal-popup {
-    background-color: var(--white-secondary);
+    background-color: #F1F1F1;
     width: 500px;
     height: 600px;
     border-radius: 16px;
@@ -2056,17 +2056,23 @@ footer {
 
 @media (max-width: 375px) {
     .modal-popup {
-        width: 350px;
+        width: 340px;
         height: 500px;
         border-radius: 38px;
         gap: 16px;
     }
 
+    .modal-popup h1 {
+        font-size: 1.55rem;
+        margin-bottom: -8px;
+    }
+
     .modal-popup p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        margin-inline: -10px;
-        margin-bottom: 12px;
+        font-size: 1.1rem;
+        margin-inline: -46px;
+        margin-bottom: 16px;
+        line-height: 1.7rem;
+        margin-top: 0px;
     }
 
     .popup-first-image {
@@ -2076,12 +2082,16 @@ footer {
     .popup-second-image {
         width: 200px;
         transform: scale(1.1);
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+    }
+
+    .modal-popup-buttons {
+        gap: 70px;
     }
 
     .modal-popup-buttons label {
-        padding: 16px 32px;
-        font-size: 0.75rem;
+        padding: 16px 28px;
+        font-size: 0.85rem;
     }
 
 }
