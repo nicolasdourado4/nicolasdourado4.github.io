@@ -7,6 +7,7 @@
     <title>VAULT-TEC</title>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -157,9 +158,9 @@
         <div class="newsletter-content container">
             <h1>Agende sua Visita com o representante mais perto de você!</h1>
             <p>Visite nossos sites oficiais e inscreva-se para receber informações e acesso antecipados.</p>
-            <form action="">
-                <input placeholder="Seu melhor email" type="email" class="newsletter-input">
-                <button class="newsletter-button button hover button-hover">ENVIAR!</button>
+            <form id="newsletter-form" action="/">
+                <input id="newsletter-email" placeholder="Seu melhor email" type="email" class="newsletter-input">
+                <button id="newsletter-btn" class="newsletter-button button hover button-hover">ENVIAR!</button>
             </form>
         </div>
     </section>
@@ -203,78 +204,92 @@
         </div>
 
         <div class="gallery-content">
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
-            <figure class="card">
-                <div class="card-inner">
-                    <img class="card-image" src="images/gallery-image.jpg" alt="">
-                </div>
-                <figcaption class="card-info">
-                    <h2 class="card-title">Nuka Cola</h2>
-                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
-                </figcaption>
-            </figure>
+
+            <template id="template-card">
+                <figure class="card">
+                    <div class="card-inner">
+                        <img class="card-image" src="images/gallery-image.jpg" alt="">
+                    </div>
+                    <figcaption class="card-info">
+                        <h2 class="card-title">Nuka Cola</h2>
+                        <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>
+                    </figcaption>
+                </figure>
+            </template>
+
+
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
+<!--            <figure class="card">-->
+<!--                <div class="card-inner">-->
+<!--                    <img class="card-image" src="images/gallery-image.jpg" alt="">-->
+<!--                </div>-->
+<!--                <figcaption class="card-info">-->
+<!--                    <h2 class="card-title">Nuka Cola</h2>-->
+<!--                    <p class="card-description">There are many items in Fallout 4. The articles listed on this page aim to provide information on all of the items which can be found in the game.</p>-->
+<!--                </figcaption>-->
+<!--            </figure>-->
 
 
 
@@ -326,5 +341,7 @@
         </div>
 
     </footer>
+
+    <script src="index.js" defer></script>
 </body>
 </html>
