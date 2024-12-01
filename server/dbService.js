@@ -35,10 +35,10 @@ class DbService {
                     resolve(results);
                 })
             });
-            return response || []; // Retorna array vazio se não houver resultados
+            return response || [];
         } catch (error) {
             console.log(error);
-            return []; // Retorna array vazio em caso de erro
+            return [];
         }
     }
 
@@ -52,10 +52,9 @@ class DbService {
                     resolve(results);
                 })
             });
-            return response || []; // Retorna array vazio se não houver resultados
+            return response || [];
         } catch (error) {
             console.log(error);
-            return []; // Retorna array vazio em caso de erro
         }
     }
 
