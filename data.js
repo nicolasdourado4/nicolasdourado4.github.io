@@ -2,7 +2,7 @@
 window.onload = () => {
     const emailData = document.getElementById("emailData");
 
-    fetch("http://localhost:5000/getAll")
+    fetch("/api/getAll")
         .then(res => res.json())
         .then(data => {
             data["data"].forEach(({"email": email}) => {
@@ -27,7 +27,7 @@ cardForm.addEventListener("submit", (e) => {
     titleInput.value = "";
     descriptionInput.value = "";
 
-    fetch('http://localhost:5000/insertCard', {
+    fetch('/api/insertCard', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

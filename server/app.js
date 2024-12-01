@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 const dbService= require('./dbService');
@@ -11,7 +12,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-app.get('/getAll', (req, res) => {
+app.use(express.static(path.join(__dirname, '..')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
+app.get('/api/getAll', (req, res) => {
     const db = dbService.getDbServiceInstance()
     const result = db.GetAllData()
 
@@ -20,7 +27,7 @@ app.get('/getAll', (req, res) => {
         .catch(err => console.log(err))
 })
 
-app.get('/getCardData', (req, res) => {
+app.get('/api/getCardData', (req, res) => {
     const db = dbService.getDbServiceInstance()
     const result = db.GetCardData()
 
@@ -29,7 +36,7 @@ app.get('/getCardData', (req, res) => {
         .catch(err => console.log(err))
 })
 
-app.post('/insert', (req, res) => {
+app.post('/api/insert', (req, res) => {
     const { email } = req.body;
     const db = dbService.getDbServiceInstance()
     const result = db.insertEmail(email)
@@ -39,7 +46,7 @@ app.post('/insert', (req, res) => {
         .catch(err => console.log(err))
 })
 
-app.post('/insertCard', (req, res) => {
+app.post('/api/insertCard', (req, res) => {
     const { title, description } = req.body
     const db = dbService.getDbServiceInstance()
     const result = db.insertCard(title, description)

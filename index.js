@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('http://localhost:5000/getAll')
+    fetch('/api/getAll')
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -13,7 +13,7 @@ form.addEventListener('submit', (event) => {
     const emailInput = document.querySelector("#newsletter-email")
     const email = emailInput.value
     emailInput.value = ""
-    fetch('http://localhost:5000/insert', {
+    fetch('/api/insert', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
 })
 
 
-fetch('http://localhost:5000/getCardData')
+fetch('/api/getCardData')
     .then(res => res.json())
     .then(data => {
         generateCards(data["data"])
