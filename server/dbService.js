@@ -31,19 +31,14 @@ class DbService {
                 const query = "SELECT * FROM users;";
 
                 connection.query(query, (err, results) => {
-                    if(err) {
-                        reject(new Error(err.message));
-                    }
-                    resolve(results)
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
                 })
-
-            })
-
-            console.log(response)
-            return response
-
-        } catch (err) {
-            console.log(err.message);
+            });
+            return response || [];
+        } catch (error) {
+            console.log(error);
+            return [];
         }
     }
 
@@ -53,58 +48,49 @@ class DbService {
                 const query = "SELECT * FROM cards;";
 
                 connection.query(query, (err, results) => {
-                    if(err) {
-                        reject(new Error(err.message));
-                    }
-                    resolve(results)
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
                 })
-
-            })
-
-            console.log(response)
-            return response
-
-        } catch (err) {
-            console.log(err.message);
+            });
+            return response || [];
+        } catch (error) {
+            console.log(error);
         }
     }
 
     async insertEmail(email) {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO users (email) VALUES (?);"
+                const query = "INSERT INTO users (email) VALUES (?);";
 
                 connection.query(query, email, (err, results) => {
-                    if(err) {
-                        reject(new Error(err.message));
-                    }
-                    resolve(results)
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
                 })
-            })
-            console.log(response)
-        } catch (err) {
-            console.log(err.message);
+            });
+            return { success: true, data: response };
+        } catch (error) {
+            console.log(error);
+            return { success: false, error: error.message };
         }
     }
 
     async insertCard(title, description) {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO cards (title, description) VALUES (?, ?);"
+                const query = "INSERT INTO cards (title, description) VALUES (?, ?);";
 
                 connection.query(query, [title, description], (err, results) => {
-                    if(err) {
-                        reject(new Error(err.message));
-                    }
-                    resolve(results)
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
                 })
-            })
-            console.log(response)
-        } catch (err) {
-            console.log(err.message)
+            });
+            return { success: true, data: response };
+        } catch (error) {
+            console.log(error);
+            return { success: false, error: error.message };
         }
     }
-
 }
 
 module.exports = DbService;
