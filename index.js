@@ -48,7 +48,7 @@ function generateCards(data) {
     }
 }
 
-fetch('http://localhost:5000/getLinks')
+fetch('/api/getLinks')
     .then(res => res.json())
     .then(data => {
         changeLinks(data["data"])
