@@ -53,7 +53,7 @@ linksForm.addEventListener("submit", (e) => {
         allLinks.push(linkInfo);
     }
 
-    fetch('http://localhost:5000/insertLink', {
+    fetch('/api/insertLink', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
