@@ -58,6 +58,28 @@ class DbService {
         }
     }
 
+    async GetLinks() {
+            try {
+                const response = await new Promise((resolve, reject) => {
+                    const query = "SELECT * FROM links;";
+    
+                    connection.query(query, (err, results) => {
+                        if(err) {
+                            reject(new Error(err.message));
+                        }
+                        resolve(results)
+                    })
+    
+                })
+    
+                console.log(response)
+                return response
+    
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+    
     async insertEmail(email) {
         try {
             const response = await new Promise((resolve, reject) => {
@@ -91,6 +113,26 @@ class DbService {
             return { success: false, error: error.message };
         }
     }
+    
+    async insertLink(idlinks, href) {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "REPLACE INTO links (idlinks, href) VALUES (?, ?);"
+
+                connection.query(query, [idlinks, href], (err, results) => {
+                    if(err) {
+                        reject(new Error(err.message));
+                    }
+                    resolve(results)
+                })
+            })
+            console.log(response)
+        } catch (err) {
+            console.log(err.message)
+        }
+    }
+
+    
 }
 
 module.exports = DbService;
