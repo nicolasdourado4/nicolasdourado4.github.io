@@ -36,3 +36,29 @@ cardForm.addEventListener("submit", (e) => {
     })
         .then(res => res.json())
 })
+
+const linksForm = document.querySelector("#links-form");
+linksForm.addEventListener("submit", (e) => {
+
+    const linksInput = document.querySelectorAll(".links-input");
+
+    const allLinks = []
+    var j = 1;
+    for(let i = 0; i < linksInput.length; i++) {
+        // const idlinks = linksInput[i].id;
+        const idlinks = j
+        j++
+        const href = linksInput[i].value;
+        const linkInfo = {idlinks: idlinks, href: href}
+        allLinks.push(linkInfo);
+    }
+
+    fetch('http://localhost:5000/insertLink', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(allLinks),
+    })
+
+})
