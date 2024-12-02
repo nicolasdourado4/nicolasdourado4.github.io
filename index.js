@@ -47,3 +47,29 @@ function generateCards(data) {
         galleryContainer.appendChild(cloneCard)
     }
 }
+
+fetch('http://localhost:5000/getLinks')
+    .then(res => res.json())
+    .then(data => {
+        changeLinks(data["data"])
+    })
+
+function changeLinks(data) {
+
+    const links = document.querySelectorAll(".link-db")
+    const qtdLinks = links.length
+
+    console.log(data)
+
+    for(let i = 0; i < links.length; i++){
+        if(data[i]) {
+            links[i].href = data[i]["href"]
+
+        } else {
+            links[i].href = "#"
+        }
+        console.log(links[i].href)
+    }
+
+
+}
