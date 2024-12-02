@@ -29,7 +29,7 @@ app.get('/api/getCardData', (req, res) => {
         .catch(err => console.log(err))
 });
 
-app.get('/getLinks', (req, res) => {
+app.get('/api/getLinks', (req, res) => {
     const db = dbService.getDbServiceInstance()
     const result = db.GetLinks()
 
@@ -58,7 +58,7 @@ app.post('/api/insertCard', (req, res) => {
         .catch(err => console.log(err))
 });
 
-app.post('/insertLink', (req, res) => {
+app.post('/api/insertLink', (req, res) => {
     const bodyLength = req.body.length
     const db = dbService.getDbServiceInstance()
 
