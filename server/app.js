@@ -72,9 +72,6 @@ app.post('/insertLink', (req, res) => {
             .catch(err => console.log(err))
 
     }
-
-
-
 })
 
 
