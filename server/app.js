@@ -29,6 +29,15 @@ app.get('/getCardData', (req, res) => {
         .catch(err => console.log(err))
 })
 
+app.get('/getLinks', (req, res) => {
+    const db = dbService.getDbServiceInstance()
+    const result = db.GetLinks()
+
+    result
+        .then(data => res.json({data: data})) //
+        .catch(err => console.log(err))
+})
+
 app.post('/insert', (req, res) => {
     const { email } = req.body;
     const db = dbService.getDbServiceInstance()
@@ -47,6 +56,25 @@ app.post('/insertCard', (req, res) => {
     result
         .then(data => res.json({success: true}))
         .catch(err => console.log(err))
+})
+
+app.post('/insertLink', (req, res) => {
+    const bodyLength = req.body.length
+    const db = dbService.getDbServiceInstance()
+
+    console.log(req.body)
+
+    for(let i = 0; i < bodyLength; i++) {
+        const { idlinks, href } = req.body[i]
+        const result = db.insertLink(idlinks, href)
+        result
+            .then(data => res.json({success: true}))
+            .catch(err => console.log(err))
+
+    }
+
+
+
 })
 
 
