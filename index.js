@@ -63,8 +63,12 @@ function changeLinks(data) {
 
     for(let i = 0; i < links.length; i++){
         if(data[i]) {
-            links[i].href = data[i]["href"]
-
+             if(data[i]["href"].includes("http")) {
+                links[i].href = data[i]["href"]
+            } else {
+                links[i].href = "https://" + data[i]["href"]
+            }
+            links[i].target = "_blank"
         } else {
             links[i].href = "#"
         }
