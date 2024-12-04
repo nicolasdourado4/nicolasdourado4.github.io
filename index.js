@@ -62,7 +62,7 @@ function changeLinks(data) {
     console.log(data)
 
     for(let i = 0; i < links.length; i++){
-        if(data[i]) {
+        if(data[i]["href"] !== "") {
              if(data[i]["href"].includes("http")) {
                 links[i].href = data[i]["href"]
             } else {
